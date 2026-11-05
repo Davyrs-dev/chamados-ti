@@ -1,11 +1,11 @@
-const path = require ('path');
-const {Sequelize} = require ('sequlize')
+const path = require('path');
+const { Sequelize } = require('sequelize');
 
-//Banco sqlite local: não exige instalação de servidor de banco de dados.
-const sequlize = new Sequelize({
-    dialect: 'sqlite',
-    storage: path.join(__dirname, '...', 'database.sqlite'),
-    loggin: false,
+// Banco SQLite local: não exige instalação de servidor de banco de dados.
+const sequelize = new Sequelize({
+  dialect: 'sqlite',
+  storage: path.join(__dirname, '..', 'database.sqlite'),
+  logging: false,
 });
 
-module.export = Sequelize
+module.exports = sequelize;
